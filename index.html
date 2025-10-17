@@ -1,15 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>METEO FRANCE</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <main>
+  <main>
 
-    </main>
+    <section>
+      <h1>CHOISIS TA VILLE</h1>
+    </section>
+
+    <!--  Barre de recherche VILLE -->
+    <section>
+      <div class="search">
+        <input type="text" id="search-bar" placeholder="Ville.." >
+        <button id="search-btn" type="submit"> 🔍 </button>
+      </div>
+    </section>
+
+    <!--  Inputs latitude / longitude -->
+    <section>
+      <div class="search-pos">
+
+        <div class="floating-input">
+          <input type="text" id="latitude-bar" placeholder="Latitude " />
+        </div>
+
+        <div class="floating-input">
+          <input type="text" id="longitude-bar" placeholder="Longitude" />
+        </div>
+
+      </div>
+    </section>
+
+    <div class="city">
+      <h2 id="city-name"></h2>
+    </div>
+
+    <div class="meteo">
+      <img id="weather-icon" src="img/pleine-lune.png" alt="Icône météo" />
+    </div>
+
+    <div class="temperature">
+      <p> Température actuelle : <span id="temperaturee"></span></p>
+    </div>
+
+    <div class="home">
+      <p>Chez Moi ?</p>
+    </div>
+
+    <div class="home-img">
+      <img onclick="getMyPosition()" src="img/localisation.png" alt="gps">
+    </div>
+
+  </main>
 </body>
+
 <script src="script.js"></script>
 </html>
